@@ -8,6 +8,10 @@
     --fonte1: Verdana, Geneva, Tahoma, sans-serif;
     --fonte2: 'Nunito', sans-serif;
     --fonte3: 'Great Vibes', cursive;
+
+    --cor1: rgb(0, 0, 0);
+    --cor2: rgb(255, 255, 255);
+    --cor3: rgb(40, 40, 185);
 }
 
 * {
@@ -32,8 +36,10 @@ header h1 {
     padding-top: 50px;
     /* text-transform: uppercase;  Jogando todas as letras para maiuscula */
     font-variant: small-caps; /* Jogando apenas as letras inicias de cada palvra para maiusculo */
-    font-size: 4.8vw; /* colocar o tomanho da fonte em 10% da largura total da tela (view weight), serve para deixar responsivo 
+    /* font-size: 4.8vw;  colocar o tomanho da fonte em 10% da largura total da tela (view weight), serve para deixar responsivo 
     (nesse caso o cabeçalho), ao diminuir a tela, as fontes também irão diminuir e vise e versa  */
+    font-size: 3em;
+
 }
 
 header p {
@@ -52,13 +58,14 @@ header a, footer a {
  }
 
  section {
-    padding-top: 5vh;
-    padding-bottom: 5vh;
+    padding-top: 160px;
+    padding-bottom: 160px;
     line-height: 2em;
     padding-left: 30px;
     font-family: var(--fonte3);
-    font-size: 3.2vw;
- }
+    font-size: 2em;    
+
+}
 
  section > p  {
     padding-bottom: 50px; 
@@ -87,7 +94,7 @@ section.img > p {
 
 section p#sombreado { /* um fundo mais sombreado apenas para o paragrafo que fica em cima da imagem 
     das folhas brancas (não dá para ler direito com o fundo que foi aplicado normalmente na imagem de cima) */ 
-    background-color: rgba(88, 87, 87, 0.301);
+    background-image: linear-gradient(45deg, #d9d6ad7c, #59562c33 ); 
 }
 
 section#img01{
@@ -106,8 +113,16 @@ section#img02{
 
 
  footer {
-    background-color: black;
+    background-color: var(--cor1);
     text-align: center;
     color: white;
-    padding: 10px;
+    padding: 30px;
  }
+
+a:hover {
+    background-color: var(--cor2);
+    color: var(--cor1);
+    text-decoration: underline;
+    transition-duration: 1.5s;
+ }
+
